@@ -1,0 +1,83 @@
+!doctype html>
+<div class="title">Mini Game Site — GTA V</div>
+<div class="meta">A one-page mini-site that highlights GTA V features with responsive layout.</div>
+<div class="tags"><span class="tag">HTML</span><span class="tag">Responsive</span></div>
+</article>
+
+
+<article class="proj" data-type="js" data-id="gta-api" onclick="openProject('gta-api')">
+<div class="title">Mock API Integration</div>
+<div class="meta">Example fetch calls (jsonplaceholder) and UI rendering of game-like data.</div>
+<div class="tags"><span class="tag">Fetch</span><span class="tag">Async</span></div>
+</article>
+
+
+<article class="proj" data-type="animation" data-id="gta-parallax" onclick="openProject('gta-parallax')">
+<div class="title">Parallax Header</div>
+<div class="meta">Subtle parallax scroll effect for a game-inspired hero header.</div>
+<div class="tags"><span class="tag">JS</span><span class="tag">UX</span></div>
+</article>
+</div>
+</section>
+
+
+<section id="skills" style="margin-top:20px">
+<div class="card">
+<h3>Skills</h3>
+<p style="color:var(--muted)">Languages and tools I use to build projects:</p>
+<ul style="display:flex;flex-wrap:wrap;gap:10px;padding:0;margin:12px 0 0 0;list-style:none">
+<li class="tag">HTML</li>
+<li class="tag">CSS</li>
+<li class="tag">JavaScript (ES6+)</li>
+<li class="tag">Responsive Design</li>
+<li class="tag">Git</li>
+<li class="tag">Accessibility (a11y)</li>
+<li class="tag">VS Code</li>
+</ul>
+</div>
+</section>
+
+
+<section id="contact" style="margin-top:18px">
+<div class="card">
+<h3>Contact</h3>
+<p style="color:var(--muted)">Looking for junior front-end developers? I'm open for internships and junior roles. Send a message below.</p>
+
+
+<form id="contactForm" onsubmit="handleContact(event)" style="margin-top:12px;display:grid;gap:8px">
+<input name="name" placeholder="Your name" required />
+<input name="email" type="email" placeholder="Your email" required />
+<textarea name="message" rows="4" placeholder="Message"></textarea>
+<div style="display:flex;gap:8px;align-items:center">
+<button class="btn btn--primary" type="submit">Send message</button>
+<div style="color:var(--muted);font-size:13px">Or email: <strong style="color:var(--accent)">juan@example.com</strong></div>
+</div>
+</form>
+
+
+</div>
+</section>
+
+
+</main>
+
+
+<footer>
+Built by Juan Yanza • Junior Front‑End Developer • Inspired by the Grand Theft Auto series
+</footer>
+</div>
+
+
+<!-- Modal for project details -->
+<div class="modal" id="modal">
+<div class="panel">
+<button class="close" onclick="closeModal()">✕</button>
+<div id="modalContent"></div>
+</div>
+</div>
+
+
+<!-- External JS -->
+<script src="script.js"></script>
+</body>
+</html>
