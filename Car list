@@ -1,0 +1,216 @@
+learning-dashboard/
+├── index.html
+├── styles.css
+├── script.js
+├── assets/
+│   ├── car1.jpg
+│   ├── video-placeholder.jpg
+├── README.md
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learning Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Learning Dashboard</h1>
+  </header>
+
+  <main class="main-content">
+    <section class="car-list">
+      <h2>Module 4.1: Final Project</h2>
+      <div class="car-list">
+        <img src="assets/photo-red-honda.jpg" alt="Video preview" />
+        <p class="front photo - red honda</p>
+      </div>
+
+      <div class="car-search">
+        <input type="text" id="searchInput" placeholder="Browse our cars" />
+        <div class="car-listings" id="carListings">
+          <div class="car-card">
+            <img src="assets/car1.jpg" alt="Car 1" />
+            <p>Price: $20,000<br>Mileage: 30,000<br>Transmission: Automatic</p>
+          </div>
+          <!-- Additional car cards can be added here -->
+        </div>
+      </div>
+    </section>
+
+    <aside class="sidebar">
+      <h3>Course Modules</h3>
+      <ul class="module-list">
+        <li>3.0 Final Preparation</li>
+        <li>3.1 Interview</li>
+        <li>3.2 Final Presentation</li>
+        <li>4.0 Individual Project</li>
+        <li class="completed">4.1 Final Project ✅</li>
+      </ul>
+
+      <section class="chat-section">
+        <h4>Chats</h4>
+        <div class="chat-box">FES Assistant</div>
+        <div class="chat-box">Mentorship: "Hi, you're doing great! You need to assist an..."</div>
+      </section>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Learning Platform</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+.header, .footer {
+  background-color: #003366;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.video-section {
+  flex: 3;
+  min-width: 300px;
+  padding-right: 2rem;
+}
+
+.video-player img {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.timestamp {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.car-search input {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 1.5rem 0 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.car-listings {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.car-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1rem;
+  width: 200px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.car-card img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.sidebar {
+  flex: 1;
+  min-width: 250px;
+  background-color: #fff;
+  padding: 2rem;
+  border-left: 1px solid #ccc;
+}
+
+.module-list {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.module-list li {
+  padding: 0.5rem 0;
+}
+
+.completed {
+  color: green;
+  font-weight: bold;
+}
+
+.chat-section .chat-box {
+  background-color: #e6f0ff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .video-section, .sidebar {
+    padding: 1rem;
+  }
+}
+document.getElementById('searchInput').addEventListener('input', function () {
+  const query = this.value.toLowerCase();
+  const listings = document.querySelectorAll('.car-card');
+
+  listings.forEach(card => {
+    const text = card.textContent.toLowerCase();
+    card.style.display = text.includes(query) ? 'block' : 'none';
+  });
+});
+# Learning Dashboard
+
+A responsive and professional dashboard interface for an online learning platform. Includes a video module, car search interface, course checklist, and chat sidebar.
+
+## Features
+
+- Responsive layout using Flexbox
+- Searchable car listings
+- Semantic HTML and modular CSS
+- Clean and maintainable JavaScript
+
+## Technologies
+
+- HTML5
+- CSS3
+- JavaScript (ES6)
+
+## Setup
+
+1. Clone the repository
+2. Open `index.html` in your browser
+3. Customize assets and content as needed
+
+## License
+
+MIT
