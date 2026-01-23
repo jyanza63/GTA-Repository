@@ -1,83 +1,140 @@
-!doctype html>
-<div class="title">Mini Game Site — GTA V</div>
-<div class="meta">A one-page mini-site that highlights GTA V features with responsive layout.</div>
-<div class="tags"><span class="tag">HTML</span><span class="tag">Responsive</span></div>
-</article>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blinker | Car Search</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">Blinker</div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Find Your Car</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
+  <section class="search-bar">
+    <div class="container">
+      <input type="text" placeholder="Search cars..." value="Toyota" />
+    </div>
+  </section>
 
-<article class="proj" data-type="js" data-id="gta-api" onclick="openProject('gta-api')">
-<div class="title">Mock API Integration</div>
-<div class="meta">Example fetch calls (jsonplaceholder) and UI rendering of game-like data.</div>
-<div class="tags"><span class="tag">Fetch</span><span class="tag">Async</span></div>
-</article>
+  <main>
+    <div class="container">
+      <h2>Search Results for “Toyota”</h2>
+      <p class="price-range">Price Range: $34,000 – $100,000</p>
 
-
-<article class="proj" data-type="animation" data-id="gta-parallax" onclick="openProject('gta-parallax')">
-<div class="title">Parallax Header</div>
-<div class="meta">Subtle parallax scroll effect for a game-inspired hero header.</div>
-<div class="tags"><span class="tag">JS</span><span class="tag">UX</span></div>
-</article>
-</div>
-</section>
-
-
-<section id="skills" style="margin-top:20px">
-<div class="card">
-<h3>Skills</h3>
-<p style="color:var(--muted)">Languages and tools I use to build projects:</p>
-<ul style="display:flex;flex-wrap:wrap;gap:10px;padding:0;margin:12px 0 0 0;list-style:none">
-<li class="tag">HTML</li>
-<li class="tag">CSS</li>
-<li class="tag">JavaScript (ES6+)</li>
-<li class="tag">Responsive Design</li>
-<li class="tag">Git</li>
-<li class="tag">Accessibility (a11y)</li>
-<li class="tag">VS Code</li>
-</ul>
-</div>
-</section>
-
-
-<section id="contact" style="margin-top:18px">
-<div class="card">
-<h3>Contact</h3>
-<p style="color:var(--muted)">Looking for junior front-end developers? I'm open for internships and junior roles. Send a message below.</p>
-
-
-<form id="contactForm" onsubmit="handleContact(event)" style="margin-top:12px;display:grid;gap:8px">
-<input name="name" placeholder="Your name" required />
-<input name="email" type="email" placeholder="Your email" required />
-<textarea name="message" rows="4" placeholder="Message"></textarea>
-<div style="display:flex;gap:8px;align-items:center">
-<button class="btn btn--primary" type="submit">Send message</button>
-<div style="color:var(--muted);font-size:13px">Or email: <strong style="color:var(--accent)">juan@example.com</strong></div>
-</div>
-</form>
-
-
-</div>
-</section>
-
-
-</main>
-
-
-<footer>
-Built by Juan Yanza • Junior Front‑End Developer • Inspired by the Grand Theft Auto series
-</footer>
-</div>
-
-
-<!-- Modal for project details -->
-<div class="modal" id="modal">
-<div class="panel">
-<button class="close" onclick="closeModal()">✕</button>
-<div id="modalContent"></div>
-</div>
-</div>
-
-
-<!-- External JS -->
-<script src="script.js"></script>
+      <div class="no-results">
+        <img src="illustration.png" alt="No results" />
+        <p>
+          Could not find any matches related to your search.<br />
+          Please change the filter or reset it below.
+        </p>
+        <button>Reset Filter</button>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blinker | Car Subscription</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">blinker</div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Find your car</a></li>
+          <li><a href="#" class="contact-btn">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Australia's most awarded car subscription platform</h1>
+      <h2>FIND YOUR DREAM CAR WITH BLINKER</h2>
+      <div class="search-bar">
+        <input type="text" placeholder="Search by Model, Make or Keyword" />
+        <button>Search</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="illustration">
+    <img src="urban-illustration.png" alt="Urban scene with buildings and trees" />
+  </section>
+</body>
+</html>
+<section class="movies">
+  <div class="container">
+    <h2>Popular Car Movies</h2>
+
+    <div class="movie-grid">
+
+      <div class="movie-card">
+        <img src="fast-and-furious.jpg" alt="Fast and Furious" />
+        <h3>Fast & Furious</h3>
+        <p>High‑speed action, iconic cars, and unforgettable stunts.</p>
+      </div>
+
+      <div class="movie-card">
+        <img src="front-runner.jpg" alt="The Front Runner" />
+        <h3>The Front Runner</h3>
+        <p>A gripping political drama with powerful storytelling.</p>
+      </div>
+
+      <div class="movie-card">
+        <img src="baby-driver.jpg" alt="Baby Driver" />
+        <h3>Baby Driver</h3>
+        <p>A stylish getaway‑driver film with incredible chase scenes.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<div id="loading-screen">
+  <div class="loading-search">
+    <div class="loading-bar"></div>
+    <div class="loading-button"></div>
+  </div>
+</div>
+<div id="loading-screen">
+  <div class="loading-search">
+    <div class="loading-input"></div>
+    <div class="loading-input"></div>
+    <div class="loading-button"></div>
+  </div>
+</div>
+<h1 class="fade-up">Find Your Dream Job</h1>
+<div class="slide-left">Filters</div>
+<div class="category-card pop-in">Technology</div>
+<div class="shimmer" style="width: 300px; height: 40px;"></div>
+<div class="job-card hover-lift">...</div>
+<div class="stagger">
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>
+</div>
+<script>
+  window.addEventListener("load", () => {
+    const loader = document.getElementById("loading-screen");
+    loader.classList.add("fade-out");
+  });
+</script>
+
