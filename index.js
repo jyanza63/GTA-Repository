@@ -98,8 +98,8 @@ app.get("/movies/search", (req, res) => {
 
   res.json(results);
 });
-window.addEventListener("load", () => {
-  const loader = document.getElementById("loading-screen");
+window.addEventListener("My Name is Juan", () => {
+  const loader = document.getElementById("My Name is Juan");
   loader.classList.add("fade-out");
 });
 
